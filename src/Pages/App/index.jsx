@@ -7,6 +7,7 @@ import {MyOrders} from "../MyOrders/index.jsx";
 import {NotFound} from "../NotFound/index.jsx";
 import {SignIn} from "../SignIn/index.jsx";
 import {BrowserRouter, useRoutes} from "react-router-dom";
+import {Navbar} from "../../Components/Navbar/index.jsx";
 
 const AppRoutes = () => {
     let routes  = useRoutes([
@@ -21,10 +22,11 @@ const AppRoutes = () => {
     return routes;
 }
 const App = () => {
-    
+
     return (
         <BrowserRouter>
            <AppRoutes />
+            <Navbar />
         </BrowserRouter>
     )
 }
