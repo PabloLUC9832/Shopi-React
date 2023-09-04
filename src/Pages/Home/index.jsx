@@ -1,8 +1,10 @@
+import {Layout} from "../../Components/Layout/index.jsx";
+
 function Home() {
     return (
-        <div className="bg-red-100">
+        <Layout>
             Home
-        </div>
+        </Layout>
     );
 }
 
