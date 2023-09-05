@@ -1,6 +1,7 @@
 import {Layout} from "../../Components/Layout/index.jsx";
 import {Card} from "../../Components/Card/index.jsx";
 import {useEffect, useState} from "react";
+import {ProductDetail} from "../../Components/ProductDetail/index.jsx";
 
 function Home() {
 
@@ -15,13 +16,14 @@ function Home() {
     return (
         <Layout>
             Home
-            <div className="grid gap-4 grid-cols-4 w-full max-w-screen">
+            <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
                 {
                     items ?.map(item => (
                         <Card data={item} key={item.id}/>
                     ))
                 }
             </div>
+            <ProductDetail />
         </Layout>
     );
 }
