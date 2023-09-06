@@ -9,6 +9,7 @@ import {SignIn} from "../SignIn/index.jsx";
 import {BrowserRouter, useRoutes} from "react-router-dom";
 import {Navbar} from "../../Components/Navbar/index.jsx";
 import {ShoppingCartContextProvider} from "../../Contex/index.jsx";
+import {CheckoutSideMenu} from "../../Components/CheckoutSideMenu/index.jsx";
 
 const AppRoutes = () => {
     let routes  = useRoutes([
@@ -29,6 +30,7 @@ const App = () => {
             <BrowserRouter>
                 <AppRoutes />
                 <Navbar />
+                <CheckoutSideMenu />
             </BrowserRouter>
         </ShoppingCartContextProvider>
     )
