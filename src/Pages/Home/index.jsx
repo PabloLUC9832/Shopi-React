@@ -7,24 +7,16 @@ import {ShoppingCartContext} from "../../Contex/index.jsx";
 function Home() {
 
     const context = useContext(ShoppingCartContext);
-    const renderview = () => {
-        if (context.searchByTitle?.length > 0){
-            if (context.filteredItems?.length > 0){
-                return (
-                    context.filteredItems?.map(item => (
-                        <Card data={item} key={item.id}/>
-                    ))
-                );
-            }else{
-                return (
-                    <div>We don't have anything</div>
-                );
-            }
-        }else{
+    const renderView = () => {
+        if (context.filteredItems?.length > 0){
             return (
-                context.items?.map(item => (
+                context.filteredItems?.map(item => (
                     <Card data={item} key={item.id}/>
                 ))
+            );
+        }else{
+            return (
+                <div>We don't have anything</div>
             );
         }
     };
@@ -40,7 +32,7 @@ function Home() {
                 onChange={(event) => context.setSearchByTitle(event.target.value)}
             />
             <div className="grid gap-4 grid-cols-4 w-full max-w-screen-lg">
-                {renderview()}
+                {renderView()}
             </div>
             <ProductDetail />
         </Layout>
