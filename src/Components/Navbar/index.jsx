@@ -22,7 +22,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/'>
+                        to='/'
+                        onClick={() => context.setSearchByCategory()}>
                         All
                     </NavLink>
                 </li>
@@ -31,7 +32,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/clothes'>
+                        to='/clothes'
+                        onClick={() => context.setSearchByCategory('clothes')}>
                         Clothes
                     </NavLink>
                 </li>
@@ -40,7 +42,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/electronics'>
+                        to='/electronics'
+                        onClick={() => context.setSearchByCategory('electronics')}>
                         Electronics
                     </NavLink>
                 </li>
@@ -49,7 +52,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/furnitures'>
+                        to='/furnitures'
+                        onClick={() => context.setSearchByCategory('furnitures')}>
                         Furnitures
                     </NavLink>
                 </li>
@@ -58,7 +62,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/toys'>
+                        to='/toys'
+                        onClick={() => context.setSearchByCategory('toys')}>
                         Toys
                     </NavLink>
                 </li>
@@ -67,7 +72,8 @@ const Navbar = () => {
                         className={({ isActive}) =>
                             isActive ? activeStyle : undefined
                         }
-                        to='/others'>
+                        to='/others'
+                        onClick={() => context.setSearchByCategory('others')}>
                         Others
                     </NavLink>
                 </li>
